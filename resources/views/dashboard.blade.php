@@ -44,7 +44,7 @@
   <div class="container py-5">
 
     {{-- Display data from session => $user ---}}
-    <h1 class="fw-bold mb-4">Welcome only, {{ session('user')->name }}</h1>
+    <h1 class="fw-bold mb-4">Welcome, {{ session('user')->name }}</h1>
 
     {{-- Stats Cards - Number of Users, Number of Records from another table --}}
     <div class="row g-4 mb-5">
