@@ -28,11 +28,12 @@ class AuthController extends Controller
         }
 
         // Successful account creation with success toast - 
-        User::create([
-            'name'     => $request->firstname . ' ' . $request->lastname,
-            'email'    => $request->email,
-            'password' => Hash::make($request->password),
-        ]);
+    User::create([
+        'name'     => $request->firstname . ' ' . $request->lastname,
+        'email'    => $request->email,
+        'gender'   => $request->gender,
+        'password' => Hash::make($request->password),
+]);
 
         return back()->with('success', 'Account created successfully');
     }
